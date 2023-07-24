@@ -1,9 +1,44 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet"> 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-	<script src="index.js"></script>
+        <div class="container" id="order-container">
+            <header>
+                <div>
+                    
+                </div>
+            </header>
+            
+            <main>
+                <!-- Main Menu items -->
+                <section class="menu-items" id="menu-items"></section>
+                <!-- Order Summary -->
+                <section class="order-summary" id="order-summary">
+                    <h2>Your Order</h2>
+                    <div class="order-items" id="order-items"></div>
+                    <div class="order-total" id="order-total"></div>
+                    <button class="btn" type="submit" id="complete-order">Complete Order</button>
+                </section>
+                <section class="order-complete" id="order-complete"></section>
+            </main>    
+        </div>
+        <div class="modal" id="modal">
+            <form>
+                <h2>Enter card details</h2>
+                <div class="payment-inputs">
+                    <input type="text" id="payment-name" placeholder="Enter your name" required>
+                    <input type="text" placeholder="Enter card number" required>
+                    <input type="text" placeholder="Enter CVV" required>
+                </div>
+                <button class="btn pay-btn" id="pay-button" type="submit">Pay</button>
+            </form>
+        </div>
+	    <script src="index.js" type="module"></script>
     </body>
 </html>
 
